@@ -1,0 +1,18 @@
+﻿
+<h3>This is a grand child component</h3>
+<button @onclick="ChangeTheme">Change Theme</button>
+
+<h1>Theme : @homeComponent.theme</h1>
+
+
+
+@code {
+    [CascadingParameter]
+    public Home homeComponent { get; set; } = default!;
+
+
+    public void ChangeTheme()
+    {
+        homeComponent.UpdateTheme("Light");
+    }
+}

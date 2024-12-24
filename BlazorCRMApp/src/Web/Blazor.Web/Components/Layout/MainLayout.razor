@@ -1,0 +1,21 @@
+﻿@using Radzen.Blazor
+@inherits LayoutComponentBase
+
+
+<AuthorizeView>
+    <Authorized>
+        <main>
+            <div class="wrapper">
+                @* <Header /> *@
+                <NavMenu />
+                <div class="content-wrapper">
+                    @Body
+                </div>
+            </div>
+             <RadzenComponents />
+        </main>
+    </Authorized>
+    <NotAuthorized>
+        <AccessDenied />
+    </NotAuthorized>
+</AuthorizeView>
